@@ -1,6 +1,8 @@
 aSmack README
 =============
 
+Download From: http://asmack.freakempire.de/
+
 Version: 4.0.7
 Build date: Fr 20. Feb 09:16:47 CET 2015
 
