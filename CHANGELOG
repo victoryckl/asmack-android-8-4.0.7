@@ -1,0 +1,128 @@
+Release 4.0.7
+	A security vulnerability regarding Hostname verification was reported and fixed (SMACK-643)
+	See JIRA for a full list of fixed issues: https://igniterealtime.org/issues/browse/SMACK
+
+Release 4.0.6
+	See JIRA for a full list of fixed issues: https://igniterealtime.org/issues/browse/SMACK
+
+Release 4.0.5
+	See JIRA for a full list of fixed issues: https://igniterealtime.org/issues/browse/SMACK
+
+Release 4.0.4
+	See JIRA for a full list of fixed issues: https://igniterealtime.org/issues/browse/SMACK
+
+Release 4.0.3
+	See JIRA for a full list of fixed issues: https://igniterealtime.org/issues/browse/SMACK
+
+Release 4.0.2
+	See JIRA for a full list of fixed issues:
+	https://igniterealtime.org/issues/browse/SMACK-586?jql=fixVersion%20%3D%204.0.2%20AND%20project%20%3D%20SMACK
+
+Release 4.0.1
+	See JIRA for a full list of fixed issues:
+	https://igniterealtime.org/issues/browse/SMACK-583?jql=fixVersion%20%3D%204.0.1%20AND%20project%20%3D%20SMACK
+
+Release 4.0.0
+	See JIRA for a full list of fixed issues for (a)Smack 4.0:
+	https://igniterealtime.org/issues/browse/SMACK-410?jql=fixVersion%20%3D%204.0.0%20AND%20project%20%3D%20SMACK
+
+Release 4.0.0-rc2
+	Many improvements. The API is considered stable. Now it is the perfect
+	time to test (a)Smack 4.0 if you haven't already.
+
+Release 4.0.0-rc1
+	Includes all the changes of the 0.9-SNAPSHOT series
+
+Release 0.9.0-SNAPSHOT
+	- Cleanup PrivacyList API
+	- Refactor AMP API
+	- Rename Connection to XMPPConnection
+	- IQReplyFilter fixes
+	- NPE fixes
+	- SASL DIGEST-MD5 fixes
+	- Bunch of improvements (SMACK-543, SMACK-538, SMACK-533, SMACK-71, SMACK-357, SMACK-541, SMACK-544, SMACK-53)
+	- Use correct namespace for MUC.getAdmins() SMACK-371
+	- PingManager should notify PingFailedlisteners only once SMACK-548
+	- Renamed XMPPConnection to TCPConnection
+	- Removed non-SASL auth code
+	- Minor bugfixes
+	- Use upstream with extended PingManager
+	- Use upstream Smack repository
+
+Release 0.8.10
+	- SMACK-540: Use WeakReference in MUC NodeInformationProvider
+
+Release 0.8.9
+	- SMACK-463: catch and log exceptions in packet listeners
+
+Release 0.8,9beta4
+	- Fixed entity caps hash calculation
+
+Release 0.8.9beta3
+	- Fixed XEP-184 delivery receipts in aSmack
+
+Release 0.8.9beta2
+	- SMACK-361 Minor EntityCapsManager fixes
+	- SMACK-462 Use getInstace() ConnectionCreationListener
+
+Release 0.8.9beta1
+	- SMACK-403 Fixed connectionCreationListener for CarbonManager, prevents duplicate CarbonManagers for the same connection instance
+	- Minor ping manger fixes
+
+Release 0.8.8
+	- SMACK-339 Allow ConnectionListeners to be added before Connection is connected. Currently throws exception
+
+Release 0.8.7
+	- SMACK-459 actually add the defaultIdentity to the result of getIdentities()
+	- SMACK-459 Make it user proof by returning an unmodifiable set again
+
+Release 0.8.6
+	- Added support for SASL EXTERNAL to aSmack
+
+Release 0.8.6beta3
+	- SMACK-461 Remove incorrect deprecated marker for DiscoverInfo.Identity.setType()
+	- SMACK-460 ServiceDiscoveryManager constructor usage in connectionCreated()
+	- SMACK-459 Add option to configure the default identity in ServiceDiscoveryManager
+
+Release 0.8.6beta2
+	- SMACK-443 remove duplicate notifyReconnection()
+	- SMACK-373 Don't remove listeners after a disconnect() , keep state of Connection between disconnect() and connect()/login()
+
+Release 0.8.6beta
+	- SMACK-458 Managers should be kept on disconnects
+	- SMACK-411 ServiceDiscoveryManager identities should be non-static and kept in a Set to allow multiple identities as per XEP-0030
+	- SMACK-457 Remove unnecessary printStackTrace() in XMPPConnection
+
+Release 0.8.5
+	- SMACK-456 Added the causing exception to exceptions throw by XMPPConnection
+	- SMACK-444 Allow 'null' for options in ServerTrustManager
+	- SMACK-452 Correctly parse stream error packets
+
+Release 0.8.4
+	- SMACK-455 Fixed improper advance of parser when parsing multiple items in a pubsub message.
+	- Removed duplicate rosterInitialized=true block in RosterResultListener. This block already exists in RosterPacketListener.
+	- Update NS server code in dnsjava
+
+Release 0.8.3
+	- SMACK-369 remove try/catch block in XMPPConnection.connect()
+	- SMACK-439 Improve documentation for MultiUserChat.InvitationsListener
+	- SMACK-430 Re-activated code that throws an exception if createOutgoingFileTrans
+fer() was called with a bare JID
+	- SMACK-384 Don't use a semaphore while waiting for PacketReader to be started.
+	- SMACK-361 Changed default for filename encoding to Base 32 (which should work on all file systems) and added a Base 64 filename and url safe implementation of the StringEncoder.
+	- SMACK-438 Avoid NPE when the weak reference is null. Add InvitationsMonitor as
+strong reference within getInvitationsMonitor and return it within the block so it
+can't get gc'ed between put() and get()
+
+Release 0.8.2
+	- Removed the whitespace ping code SMACK-412
+	- SMACK-419 PacketWriter: Only flush the BufferedWriter if the packet queue is empty
+	- SMACK-417 If both PacketReader and PacketWriter fail at the same time, connectionClosedonError() is called two times
+	- The default ping intervall is now configured in seconds and not milliseconds
+
+Release 0.8.1.1
+	- Improved 'caps' XEP-0115 support
+	- Fixes an NPE in 0.8.1
+
+Release 0.8
+	- First release to test the release process
